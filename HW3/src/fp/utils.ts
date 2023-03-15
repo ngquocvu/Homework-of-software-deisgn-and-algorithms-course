@@ -55,8 +55,6 @@ export function pipe<A, B, C, D, E>(
 ): E;
 export function pipe<Funcs extends Fn[]>(a: any, ...fns: Funcs) {
   return fns.reduce((acc, fn, index) => {
-    console.log(index, 'Vu');
-
     return fn(acc);
   }, a);
 }
